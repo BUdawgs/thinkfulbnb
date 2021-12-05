@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  display: grid;
 }
 
 h2 {
@@ -43,7 +44,7 @@ main img {
 
 .item {
   flex: 1;
-  margin:10px;
+  margin: 10px;
 }
 
 .item-double {
@@ -59,14 +60,17 @@ header {
 }
 
 .logo {
+  display: flex;
   font-family: "Pangolin", cursive;
   font-size: 58px;
   color: #fff;
+  justify-content: center;
 }
 
 header nav ul {
   display: flex;
   justify-content: center;
+  text-decoration: none;
 }
 
 header nav ul li {
@@ -75,12 +79,8 @@ header nav ul li {
 
 header nav ul li a {
   color: #fff;
-  text-decoration: none;
   padding: 0 20px 0 0;
-}
-
-header nav ul li:last-child a {
-  margin-right: 20px;
+  text-decoration: none;
 }
 
 header nav ul li a:hover {
@@ -100,12 +100,7 @@ form {
 
 form label {
   font-weight: bold;
-}
-
-form select, form input {
-  margin-bottom: 20px;
-  width: 65%;
-  float: right;
+  padding-right: 10px;
 }
 
 form button {
@@ -115,7 +110,11 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
-  justify-content: center;
+}
+
+.form-input {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* -------  Footer ------- */
@@ -133,50 +132,66 @@ footer p {
 /* -------  Media Query ------- */
 
 @media all and (min-width: 480px) {
-
   header {
-    background-color: #ff385c;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    padding: 15px;
   }
-
-  header nav {
-    padding: 10px;
+  
+  .logo {
+    font-size: 48px;
+    padding-left: 5px;
   }
 
   form {
-    flex-direction: row;
-  }
-
-  .group {
+    align-items: center;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    padding: 10px 10px 10px 10px;
   }
 
-  .search-form .item {
-    display: flex block;
-    flex: 1 1 auto;
+  form div {
+    display: flex;
     flex-direction: column;
   }
 
-  .item label, .item input, .item select, .item button {
-    display: flex;
-    width: 100%
+  form label {
+    padding-bottom: 15px;
+    font-weight: bold;
   }
 
-  .grid-column {
-    display: flex;
-    flex: 1;
-    flex-direction: column; 
-    margin: 10px;
+  .form-input {
+    padding-right: 15px;
+    justify-content: center;
   }
 
-  .grid-row {
+  button {
+    justify-content: center;
+  }
+
+  .group {
+    align-items: center;
     display: flex;
-    flex: 1;
+    justify-content: center;
     flex-direction: row;
+  }
+
+  .item button, .item input, .item label, .item select {
+    display: flex;
+    width: 100%;
+  }
+
+  .item {
+    flex: 1;
+    margin: 15px;
+  }
+
+  .item-double {
+    flex: 2;
+    margin: 15px;
   }
 }
