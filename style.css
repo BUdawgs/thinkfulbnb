@@ -112,6 +112,16 @@ form button {
   width: 100%;
 }
 
+form input {
+  margin-bottom: 20px;
+  width: 182px;
+}
+
+form select {
+  margin-bottom: 20px;
+  width: 186px;
+}
+
 .form-input {
   display: flex;
   justify-content: space-between;
@@ -152,6 +162,7 @@ footer p {
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px 10px 10px 10px;
+    align-items: baseline;
   }
 
   form div {
